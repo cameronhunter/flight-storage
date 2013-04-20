@@ -3,6 +3,6 @@
   "description": "LocalStorage manager for Flight",
   "version": "0.1.0",
   "dependencies": {
-    "flight": "1.0.7"
+    "flight": "~1.0.0"
   }
 }
