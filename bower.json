@@ -1,6 +1,6 @@
 {
-	"name": "flight-localstorage",
-  "description": "LocalStorage manager for Flight",
+  "name": "flight-storage",
+  "description": "Configurable storage manager for Flight.",
   "version": "0.1.0",
   "dependencies": {
     "flight": "~1.0.0"
