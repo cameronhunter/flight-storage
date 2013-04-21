@@ -4,30 +4,16 @@ require(['lib/adapters'], function(Adapters) {
 
   describeComponent('lib/flight-storage', function () {
 
-    adapters.forEach(function(adapter) {
+    describe('Storage behaviour', function() {
+      adapters.forEach(function(adapter) {
 
-      beforeEach(function() {
-        setupComponent({
-          adapter: adapter
-        });
-      });
-
-      describe('Adapter "' + adapter + '"', function() {
-        describe('Adapter API', function() {
-          it('should support get', function() {
-            expect(this.component.get).toBeDefined()
-          });
-
-          it('should support set', function() {
-            expect(this.component.set).toBeDefined()
-          });
-
-          it('should support clear', function() {
-            expect(this.component.clear).toBeDefined()
+        beforeEach(function() {
+          setupComponent({
+            adapter: adapter
           });
         });
 
-        describe('Storage behaviour', function() {
+        describe('Adapter "' + adapter + '"', function() {
 
           beforeEach(function() {
             this.component.clear();
@@ -50,18 +36,8 @@ require(['lib/adapters'], function(Adapters) {
             expect(this.component.get('foo')).toBeUndefined();
           });
         });
-
-        describe('Event behaviour', function() {
-          it('should announce that data has been stored', function() {
-            var eventSpy = spyOnEvent(document, 'storageDataStored');
-            this.component.trigger('storageSet', {foo:'bar'});
-            expect(eventSpy).toHaveBeenTriggeredOn(document);
-          });
-        });
-
       });
 
     });
   });
-
 });
