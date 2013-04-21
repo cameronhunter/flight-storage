@@ -1,3 +1,4 @@
 node_modules/
 components/
 .grunt/
+_SpecRunner.html
