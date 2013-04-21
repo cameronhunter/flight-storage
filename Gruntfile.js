@@ -32,7 +32,6 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "grunt-contrib-jasmine" task.
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-  // Default task(s).
   grunt.registerTask('default', ['jasmine']);
-
+  grunt.registerTask('travis', ['jasmine']);
 };
