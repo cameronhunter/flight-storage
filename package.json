@@ -9,6 +9,9 @@
     "phantomjs": "1.8.1-1",
     "grunt-template-jasmine-requirejs": "~0.1.0"
   },
+  "engines": {
+    "node": ">=0.8.0"
+  },
   "scripts": {
     "test": "bower install; grunt travis --verbose"
   }
