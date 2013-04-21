@@ -6,3 +6,4 @@ A [Flight](https://github.com/twitter/flight) component for storing JSON data in
 * In memory object
 * Location hash
 * Window name
+* Data attributes
