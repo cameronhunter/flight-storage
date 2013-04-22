@@ -9,6 +9,12 @@ A [Flight](https://github.com/twitter/flight) component for storing JSON data in
 * Location hash
 * Window name
 
+## Installation
+
+````bash
+bower install flight-storage
+````
+
 ## Example
 
 ````javascript
