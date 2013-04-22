@@ -47,7 +47,21 @@ require(['lib/adapters'], function(Adapters) {
             var eventSpy = spyOnEvent(document, events.save + '-failure');
             this.component.trigger(events.save, {key:'foo', value:'bar'});
             expect(eventSpy).toHaveBeenTriggeredOn(document);
-          });          
+          });
+
+          it('should announce that data was not retrieved', function() {
+            spyOn(this.component, 'get').andThrow("Uh oh, couldn't read the data store");
+            var eventSpy = spyOnEvent(document, events.get + '-failure');
+            this.component.trigger(events.get, {key:'foo'});
+            expect(eventSpy).toHaveBeenTriggeredOn(document);
+          });
+
+          it('should announce that data was not cleared', function() {
+            spyOn(this.component, 'clear').andThrow("You'll never destroy me!");
+            var eventSpy = spyOnEvent(document, events.clear + '-failure');
+            this.component.trigger(events.clear);
+            expect(eventSpy).toHaveBeenTriggeredOn(document);
+          });
 
         });
 
