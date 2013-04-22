@@ -2,8 +2,9 @@
 
 A [Flight](https://github.com/twitter/flight) component for storing JSON data in arbitrary data stores. Currently supports:
 
+* Cookie
+* Data attributes
+* In-memory object
 * Local storage
-* In memory object
 * Location hash
 * Window name
-* Data attributes
