@@ -34,7 +34,7 @@ define(['flight-storage/manager'], function(StorageManager) {
   });
   
   // Listen for errors
-  $(document).on('storage-save-failure', function(e, data) {
+  $(document).on('storage-save-failure storage-get-failure storage-clear-failure', function(e, data) {
     console.error(e, data);
   });
   
