@@ -2,7 +2,7 @@ require(['lib/adapters'], function(Adapters) {
   
   var adapters = (new Adapters()).availableAdapters();
 
-  describeComponent('lib/flight-storage', function () {
+  describeComponent('lib/manager', function () {
 
     describe('Adapter API', function() {
       adapters.forEach(function(adapter) {

@@ -8,7 +8,7 @@ require(['lib/adapters'], function(Adapters) {
     clear: 'storage-clear'
   };
 
-  describeComponent('lib/flight-storage', function () {
+  describeComponent('lib/manager', function () {
 
     describe('Event behaviour', function() {
       adapters.forEach(function(adapter) {
