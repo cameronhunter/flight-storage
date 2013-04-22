@@ -12,7 +12,7 @@ A [Flight](https://github.com/twitter/flight) component for storing JSON data in
 ## Example
 
 ````javascript
-define(['flight-storage/storage-manager'], function(StorageManager) {
+define(['flight-storage/manager'], function(StorageManager) {
   
   // Setup the store
   StorageManager.attachTo(document, {
