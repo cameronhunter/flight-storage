@@ -48,3 +48,27 @@ define(['flight-storage/manager'], function(StorageManager) {
   $(document).trigger('storage-clear');
 });
 ````
+
+or use the storage adapter mixins directly in your components
+
+````javascript
+define(['flight/lib/component', 'flight-storage/adapters/local-storage'], function(defineComponent, withLocalStorage) {
+
+  var MyComponent = defineComponent(myComponent, withLocalStorage);
+  
+  function myComponent() {
+    
+    this.after('initialize', function() {
+    
+      this.on('myComponentEvent', function(e, data) {
+        // Save into local storage
+        this.set(data.key, data.value);
+      });
+      
+    });
+    
+  }
+
+  return MyComponent;
+});
+````
