@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "devDependencies": {
     "bower": "0.8.6",
-    "grunt-cli": "0.1.7",
     "grunt": "~0.4.1",
     "grunt-contrib-jasmine": "0.4.2",
     "phantomjs": "1.8.1-1",
