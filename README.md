@@ -12,7 +12,7 @@ A [Flight](https://github.com/twitter/flight) component for storing JSON data in
 ## Installation
 
 ```bash
-bower install flight-storage
+bower install --save flight-storage
 ```
 
 ## Example
