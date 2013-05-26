@@ -8,5 +8,11 @@
   "devDependencies": {
     "jasmine-jquery": "1.5.0",
     "flight-jasmine": "1.0.0"
-  }
+  },
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "test",
+    "package.json"
+  ]
 }
