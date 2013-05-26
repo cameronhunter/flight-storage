@@ -72,3 +72,26 @@ define(['flight/lib/component', 'flight-storage/adapters/local-storage'], functi
   return MyComponent;
 });
 ```
+
+## Development
+
+Development of this component needs [Bower](http://bower.io), and ideally
+[Karma](http://karma-runner.github.io) to be globally installed:
+
+```bash
+npm install -g bower karma
+```
+
+Then install the Node.js and client-side dependencies by running the following
+commands in the repo's root directory.
+
+```bash
+npm install
+bower install
+```
+
+To continuously run the tests in Chrome and Firefox during development, just run:
+
+```bash
+karma start
+```
