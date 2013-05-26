@@ -1,5 +1,5 @@
-require(['lib/adapters'], function(Adapters) {
-  
+define(['lib/adapters'], function(Adapters) {
+
   var adapters = (new Adapters()).availableAdapters();
 
   var events = {
