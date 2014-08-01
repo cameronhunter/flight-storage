@@ -3,11 +3,10 @@
   "description": "Configurable storage manager for Flight.",
   "version": "0.1.0",
   "dependencies": {
-    "flight": ">=1.1.0"
+    "flight": "~1.1.4"
   },
   "devDependencies": {
-    "jasmine-jquery": "*",
-    "flight-jasmine": "*"
+    "jasmine-flight": "~2.2.0"
   },
   "ignore": [
     ".gitignore",
