@@ -1,4 +1,6 @@
-# flight-storage [![Build Status](https://secure.travis-ci.org/cameronhunter/flight-storage.png)](http://travis-ci.org/cameronhunter/flight-storage)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/) [![Build Status](https://secure.travis-ci.org/cameronhunter/flight-storage.svg)](http://travis-ci.org/cameronhunter/flight-storage)
+
+# flight-storage
 
 A [Flight](https://github.com/twitter/flight) component for storing JSON data in arbitrary data stores. Currently supports:
 
