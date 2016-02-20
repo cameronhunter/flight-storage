@@ -1,93 +1,74 @@
-// Sample Karma configuration file, that contain pretty much all the available options
-// It's used for running client tests on Travis (http://travis-ci.org/#!/karma-runner/karma)
-// Most of the options can be overriden by cli arguments (see karma --help)
-//
-// For all available config options and default values, see:
-// https://github.com/karma-runner/karma/blob/stable/lib/config.js#L54
+// Karma configuration
+// Generated on Fri Aug 01 2014 15:54:09 GMT+0200 (CEST)
+
+module.exports = function(config) {
+  config.set({
+
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: '',
 
 
-// base path, that will be used to resolve files and exclude
-basePath = '';
+    // frameworks to use
+    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine', 'requirejs'],
 
-// list of files / patterns to load in the browser
-files = [
-  'components/es5-shim/es5-shim.js',
-  'components/es5-shim/es5-sham.js',
 
-  // frameworks
-  JASMINE,
-  JASMINE_ADAPTER,
-  REQUIRE,
-  REQUIRE_ADAPTER,
+    // list of files / patterns to load in the browser
+    files: [
+      // loaded without require
+      'components/jquery/dist/jquery.js',
+      'components/jasmine-jquery/lib/jasmine-jquery.js',
+      'components/jasmine-flight/lib/jasmine-flight.js',
+      'test/test-main.js',
+      // loaded with require
+      {pattern: 'components/flight/**/*.js', included: false},
+      {pattern: 'lib/**/*.js', included: false},
+      {pattern: 'test/spec/**/*.spec.js', included: false}
+    ],
 
-  // loaded without require
-  'components/jquery/jquery.js',
-  'components/jasmine-jquery/lib/jasmine-jquery.js',
-  'components/flight-jasmine/lib/flight-jasmine.js',
 
-  // loaded with require
-  {pattern: 'components/flight/**/*.js', included: false},
-  {pattern: 'lib/**/*.js', included: false},
-  {pattern: 'test/spec/**/*.spec.js', included: false},
+    // list of files to exclude
+    exclude: [
+      'components/flight/lib/standalone/*.js'
+    ],
 
-  'test/test-main.js'
-];
 
-// list of files to exclude
-exclude = [
-  'components/flight/lib/standalone/*.js'
-];
+    // preprocess matching files before serving them to the browser
+    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+    },
 
-// use dots reporter, as travis terminal does not support escaping sequences
-// possible values: 'dots', 'progress', 'junit', 'teamcity'
-// CLI --reporters progress
-reporters = [
-  'dots'
-];
 
-// web server port
-// CLI --port 9876
-port = 9876;
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress'],
 
-// cli runner port
-// CLI --runner-port 9100
-runnerPort = 9100;
 
-// enable / disable colors in the output (reporters and logs)
-// CLI --colors --no-colors
-colors = true;
+    // web server port
+    port: 9876,
 
-// level of logging
-// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-// CLI --log-level debug
-logLevel = LOG_INFO;
 
-// enable / disable watching file and executing tests whenever any file changes
-// CLI --auto-watch --no-auto-watch
-autoWatch = true;
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
 
-// Start these browsers, currently available:
-// - Chrome
-// - ChromeCanary
-// - Firefox
-// - Opera
-// - Safari (only Mac)
-// - PhantomJS
-// - IE (only Windows)
-// CLI --browsers Chrome,Firefox,Safari
-browsers = [
-  'Chrome',
-  'Firefox'
-];
 
-// If browser does not capture in given timeout [ms], kill it
-// CLI --capture-timeout 5000
-captureTimeout = 5000;
+    // level of logging
+    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    logLevel: config.LOG_INFO,
 
-// Auto run tests on start (when browsers are captured) and exit
-// CLI --single-run --no-single-run
-singleRun = false;
 
-// report which specs are slower than 500ms
-// CLI --report-slower-than 500
-reportSlowerThan = 500;
+    // enable / disable watching file and executing tests whenever any file changes
+    autoWatch: true,
+
+
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['Chrome', 'Firefox'],
+
+
+    // Continuous Integration mode
+    // if true, Karma captures browsers, runs the tests and exits
+    singleRun: false
+  });
+};
